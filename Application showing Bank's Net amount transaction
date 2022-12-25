@@ -1,0 +1,34 @@
+class compute():
+       list1=[]
+       list2=[]
+       n=int(input("enter the total no of deposits"))
+       print("enter the deposits one by one")
+       for x in range(0,n):
+        element=int(input())
+        list1.append(element)
+       m=int(input("enter the total no of withdrawals"))
+       print("enter the withdrawals one by one")
+       for x in range(0,m):
+        element=int(input())
+        list2.append(element)
+       sum1=0
+       for x in list1:
+        sum1=sum1+x
+       sum2=0
+       for x in list2:
+        sum2=sum2+x
+class calc():
+         d=0
+         w=0
+         def __init__(self,b,w,d):
+           self.b_name=b
+           self.withdrawal=w
+           self.deposit=d
+           self.net_amount=d-w
+name=input("enter the name of the bank")
+obj1=compute()
+obj2=calc(name,obj1.sum2,obj1.sum1)
+print("Name of the Bank:",obj2.b_name)
+print("Total deposits:",obj2.deposit)
+print("Total withdrawals:",obj2.withdrawal)
+print("Net amount:",obj2.net_amount)
