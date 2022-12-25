@@ -1,0 +1,81 @@
+words=["zero","one","two","three","four","five","six","seven","eight","nine"]
+
+words1=["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+
+words2=["zero","zero","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"]
+
+num=[]
+
+num=input("enter")
+
+n=len(num)
+
+l=n-1
+
+if n==1:
+
+  for x in range(0,10):
+
+    if int(num)==x:
+
+     print(words[x])
+   
+
+if n==2:
+   if int(num)==10:
+    print(words1[0])
+
+   if int(num[0])==1:
+
+     for x in range(1,9):
+
+       if int(num[1])==x:
+
+         print(words1[x])
+
+   else:
+
+     for x in range(2,10):
+       if int(num[0])==x:
+          temp1=words2[x]
+
+     for x in range(1,10):
+
+       if int(num[1])==x:
+
+         temp2=words[x]
+
+     if int(num[1])==0:
+
+        print(temp1)
+
+     else:
+       print(temp1,temp2)
+if n==3:
+  for x in range(0,10):
+    if int(num[0])==x:
+      temp1=words[x]
+  if int(num[1])==0:
+    for x in range(0,10):
+      if int(num[2])==x:
+        temp2=words[x]
+    if int(num[2])==0:
+       print(temp1,"hundred")
+    else:
+       print(temp1,"hundred and",temp2)
+  if int(num[1])==1:
+    for x in range(0,10):
+      if int(num[2])==x:
+        temp3=words1[x]
+    print(temp1,"hundred and",temp3)
+  else:
+    for x in range(2,10):
+      if int(num[1])==x:
+        temp2=words2[x]
+    for x in range(0,10):
+      if int(num[2])==x:
+        temp3=words[x]
+    if int(num[2])==0:
+      print(temp1,"hundred and",temp2)
+    else:
+      print(temp1,"hundred and",temp2,temp3)
