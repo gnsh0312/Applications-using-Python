@@ -1,0 +1,9 @@
+from ast import If
+print("ganesh")
+val=input("enter the number to be checked for prime: ")
+a=int(val)-1
+b=int(val)+1
+if a%6==0 or b%6==0:
+ print("the given number is prime")
+else:
+ print("the given number is not prime")
