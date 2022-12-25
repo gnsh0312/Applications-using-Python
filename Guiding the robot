@@ -1,0 +1,45 @@
+import math
+print("enter the instruction to the robot in Direction distance format,(i.e) UP 30,DOWN 15")
+instructions=[]
+list=input("enter the instructions for the robot")
+instructions=list.split(" ")
+n=len(instructions)
+m=n-1
+print("the robot has moved as follows")
+dir=[]
+steps=[]
+for x in range(1,m,2):
+  dir.append(instructions[x])
+for x in range(0,n,2):
+  steps.append(instructions[x])
+print(dir)
+print(steps)
+x=0
+y=0
+s=len(steps)
+d=len(dir)
+for a in range(0,s):
+  if dir[a]=="UP":
+    y=y+steps[a+1]
+  if dir[a]=="DOWN":
+    y=y-steps[a+1]
+  if dir[a]=="LEFT":
+    x=x-steps[a+1]  
+  if dir[a]=="RIGHT":
+    x=x+steps[a+1]  
+class compute():
+  def __init__(self,x1,y1):
+    self.x1=x1
+    self.y1=y1
+    u=(x1-0)*(x1-0)
+    v=(y1-0)*(y1-0)
+    self.dist=math.sqrt(u+v)
+obj=compute(x,y)
+print("the robot has moved:",obj.dist,"steps")
+
+
+
+
+
+
+
